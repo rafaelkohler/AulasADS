@@ -1,0 +1,16 @@
+DELETE
+FROM Production.Product
+WHERE
+	ListPrice = 1
+	AND
+	[NAME] = 'FLAT%'
+
+SELECT
+*
+FROM Production.Product
+WHERE
+	ListPrice = 1
+	AND
+	[NAME] LIKE 'FLAT%'
+
+-- ANTES DE FAZER UM UPDATE OU UM DELETE, FAÇA UM SELECT PARA CONFIRMAR OS DADOS
