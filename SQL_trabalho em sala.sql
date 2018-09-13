@@ -103,6 +103,12 @@ insert into funcionarios (id_departamento, nome_funcionario) values (2, 'Joaquim
 insert into funcionarios (id_departamento, nome_funcionario) values (3, 'Marcia');
 
 insert into funcionarios (id_departamento, nome_funcionario) values (1, 'Davi');
+
+insert into funcionarios (id_departamento, nome_funcionario) values (1, 'Bruno');
+
+insert into funcionarios (id_departamento, nome_funcionario) values (3, 'Joaquim');
+
+insert into funcionarios (id_departamento, nome_funcionario) values (1, 'Marcia');
     
 -- selecionando os dados
 
@@ -123,3 +129,19 @@ SELECT departamentos.*, funcionarios.* FROM departamentos LEFT JOIN funcionarios
 SELECT departamentos.*, funcionarios.* FROM departamentos CROSS JOIN funcionarios 
 
 SELECT funcionarios.*, departamentos.* FROM funcionarios CROSS JOIN departamentos
+
+
+select * from funcionarios;
+
+SELECT id_funcionario, nome_funcionario FROM funcionarios
+WHERE nome_funcionario = 'Bruno'
+
+SELECT id_funcionario, nome_funcionario FROM funcionarios
+WHERE nome_funcionario = 'Marcia'
+
+SELECT id_funcionario, nome_funcionario FROM funcionarios
+WHERE nome_funcionario <> 'Bruno'
+
+SELECT * FROM funcionarios
+WHERE (id_funcionario BETWEEN 3 AND 11)
+AND NOT id_funcionario IN (1,2,3,4,5,6);
